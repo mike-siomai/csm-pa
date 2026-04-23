@@ -1,0 +1,7 @@
+outputs/
+*.pdf
+*.pptx
+*.html
+*.json
+Thumbs.db
+.DS_Store
