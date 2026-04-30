@@ -6,20 +6,26 @@ Confidence: High / Medium / Low
 
 ## Client Health Evidence
 
-- Direct client feedback, checkpoint evidence, or delivery trend.
-- Direct client feedback, checkpoint evidence, or delivery trend.
-- Direct client feedback, checkpoint evidence, or delivery trend.
+- Direct client feedback, checkpoint evidence, or delivery trend relevant to account sentiment.
+- Delivery quality, reliability, compliance, staffing, or operational health signal.
+- Relationship, renewal, escalation, or commercial risk/opportunity signal.
 
-## Growth / Resource Opportunities
-
-- Practical resource, skill, AI enablement, QA, DevOps, or process opportunity.
-- Practical resource, skill, AI enablement, QA, DevOps, or process opportunity.
-- Practical resource, skill, AI enablement, QA, DevOps, or process opportunity.
+## Growth Signal
 
 ## Open Software-Development Job Reqs
 
-- Public job requisition title and source, if reliable.
-- Public job requisition title and source, if reliable.
-- If none are found: `No reliable public software-development requisitions found.`
+- Public software-development related role title and source, if reliable.
+- If none are found: `No external job requistion found`
+
+## Recommended Resource Opportunity
+
+- Evidence-based software-development role recommendation from monthly checkpoints or daily reports.
+- Base the recommendation on roadmap demand, burnout/overutilization, lack of required expertise, recurring blockers, QA needs, DevOps/platform gaps, mobile/backend/frontend needs, AI enablement, or automation demand.
+- If evidence is insufficient: `No clear resource recommendation found.`
+
+## Action Items
+
+- CSM owner:
+- Sales owner:
 
 Gmail: checkpoint/reply source summary. Public: public source summary.

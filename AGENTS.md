@@ -245,6 +245,10 @@ Important:
 ---
 
 ### 5. Quarterly Account Review
+Target audience:
+- Sales
+- COO
+
 Inputs:
 - monthly checkpoints
 - team delivery trends
@@ -255,27 +259,38 @@ Inputs:
 - notable wins
 
 Expected outputs:
-- executive account summary
+- Sales- and COO-ready account summary
 - team performance snapshot
 - key risks
-- opportunities
-- support required from leadership
-- action plan for next quarter
+- growth signals limited to external software-development job requisitions and evidence-based resource recommendations
+- operational delivery risks, staffing health, compliance concerns, and support required
+- recommended action items for CSM and Sales
 
 Required format:
 - Follow the QAR sample format: one account per slide/page.
+- The final output file should use the Google Drive `QAR Theme` deck as the design/theme source:
+  - `https://docs.google.com/presentation/d/1ETHEwUDG42jwsuL7ofminmuhxQOpMC2pNEogUp1vGDQ`
+  - When producing a new deck, copy or build from this theme/template instead of creating a separate visual style.
 - Each account slide/page should use this structure:
   - `Quarterly Account Review`
   - `ACCOUNT NAME Health: ...`
   - `Confidence: ...`
   - `Client Health Evidence`
-  - `Growth / Resource Opportunities`
+  - `Growth Signal`
   - `Open Software-Development Job Reqs`
+  - `Recommended Resource Opportunity`
+  - `Action Items`
   - source footer such as `Gmail: ... Public: ...`
 - Keep QAR slides/pages concise and evidence-first.
 - Prefer 2-4 bullets per section.
+- Sales and COO are the intended audience, not visible report categories. Do not label bullets as `Sales:` or `COO:` just because those roles are the readers.
+- For `Growth Signal`, consider only two areas:
+  - Software-development related role job requisitions found from reliable public web sources.
+  - Potential software-development resource roles Full Scale can recommend based on monthly checkpoints and daily reports, including roadmap demand, burnout/overutilization, or lack of required expertise.
 - Use public software-development job requisition scans only when the company identity is reliable.
-- If no reliable public software-development requisitions are found, say so directly.
+- If no reliable external software-development job requisition is found, write exactly: `No external job requistion found`.
+- For `Action Items`, remove Sales/COO audience labels. Action items may identify CSM and Sales as action owners.
+- If the quarter, account set, audience, source coverage, output format, or QAR Theme file is unclear, clarify with Mike before making assumptions.
 - Do not turn QARs into long narrative reports unless Mike explicitly requests a written memo.
 
 ---
