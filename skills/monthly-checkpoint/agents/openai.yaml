@@ -1,0 +1,4 @@
+interface:
+  display_name: "Monthly Checkpoint"
+  short_description: "Extract monthly checkpoint feedback."
+  default_prompt: "Summarize monthly checkpoint feedback for the requested client, team, or month."

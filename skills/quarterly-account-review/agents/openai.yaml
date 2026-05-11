@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quarterly Account Review"
+  short_description: "Create QAR account review slides."
+  default_prompt: "Create a quarterly account review for the requested quarter and account set."

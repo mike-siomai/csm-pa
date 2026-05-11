@@ -1,0 +1,4 @@
+interface:
+  display_name: "Daily Report"
+  short_description: "Build CSM daily report packets."
+  default_prompt: "Run the CSM daily report workflow for the requested date, weekday, client, or team."

@@ -371,6 +371,12 @@ Evaluate whether CSM HQ should include these major areas:
 3. `/skills`
    - one skill per repeatable workflow
    - each skill contains instructions, examples, schemas, and output templates
+   - current MVP skills:
+     - `skills/daily-report/`
+     - `skills/monthly-checkpoint/`
+     - `skills/quarterly-account-review/`
+   - use these project-local skills as the preferred entry points when Mike asks for those workflows
+   - keep workflow-specific procedure in the skill, and keep global policy in `AGENTS.md` and `config/`
 
 4. `/templates`
    - cliq-ready formats
