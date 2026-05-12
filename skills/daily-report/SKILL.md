@@ -51,8 +51,22 @@ If Gmail and the roster conflict, use the roster for schedule routing and docume
 Save editable source under:
 `outputs/daily/YYYY-MM-DD/daily-report.md`
 
-Use PowerPoint for manager-facing delivery by default when creating a final reviewed artifact. PDF is acceptable when Mike asks for a PDF or the existing report workflow requires it:
-`outputs/daily/YYYY-MM-DD/daily-report.pdf`
+Save the manager-facing standalone HTML dashboard under:
+`outputs/daily/YYYY-MM-DD/daily-report-dashboard.html`
+
+Daily reports are the standing exception to PowerPoint-first delivery. Do not create PDF or PowerPoint outputs unless Mike explicitly requests that format for the run.
+
+The standalone HTML dashboard must include an employee card or section for every routed employee. Each employee card/section must visibly include:
+
+- all tasks mentioned in the covered source data,
+- individual blockers with status and notes,
+- client perception, phrased only when supported by evidence,
+- performance signals,
+- risk assessment,
+- strengths,
+- improvement opportunities,
+- manager actions,
+- source coverage/status.
 
 Use `templates/daily-report-template.md` if present. If not present, use `references/report-template.md` in this skill.
 
@@ -72,6 +86,7 @@ Default review status: `Draft for Mike review`.
 
 - Include scheduled employees even when no report is found.
 - Keep unsupported fields as `Unclear` or `Not enough evidence`.
+- In the HTML dashboard, include the employee's individual blockers and client perception inside the employee card/section.
 - Preserve source references in the audit rather than crowding employee sections.
 - Use concise, manager-ready language.
 - Do not invent feedback, task status, blockers, risks, sentiment, or employee intent.

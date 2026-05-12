@@ -50,18 +50,36 @@ Also identify:
 
 ## Output Modes
 
-Ask or infer from the request whether Mike needs:
+When Mike asks to generate a Monthly Checkpoint, default to producing two paired outputs:
 
-- Internal summary: may include risks, coaching flags, confidence notes, and manager actions.
-- Client-ready summary: polished, diplomatic, and excludes sensitive internal interpretation unless approved.
-- Evidence packet: source-heavy version for audit and review.
+1. Monthly Checkpoint Report
+   - Client feedback captured verbatim per employee.
+   - Ready for internal Cliq posting.
+   - Include citations for each verbatim feedback item, using transcript timestamps, email dates/message subjects, or document references.
+   - Include a company situation / account context section with citations.
+   - Keep sensitive wording factual and reviewable.
+2. Monthly Checkpoint Analysis
+   - Internal manager analysis with categorized feedback, team health, client sentiment, risks, growth opportunities, coaching flags, and recommended actions.
+   - Separate direct evidence, cleaned summary, interpretation, assumptions, and missing data.
 
-Use `references/internal-summary-template.md` and `references/client-ready-template.md` as needed.
+For each of the two outputs, create both:
+
+- Markdown source file.
+- Standalone HTML file that opens directly in a browser without a local server.
 
 Save outputs under:
 `outputs/monthly/YYYY-MM/checkpoints/`
 
-PowerPoint is preferred for manager-facing delivery when a final artifact is requested. Keep Markdown as editable/audit source when useful.
+Default filenames:
+
+- `CLIENT-SLUG-monthly-checkpoint-report.md`
+- `CLIENT-SLUG-monthly-checkpoint-report.html`
+- `CLIENT-SLUG-monthly-checkpoint-analysis.md`
+- `CLIENT-SLUG-monthly-checkpoint-analysis.html`
+
+Use `references/cliq-report-template.md`, `references/internal-summary-template.md`, and `references/html-output-rules.md` as needed.
+
+PowerPoint is not the default for monthly checkpoint runs unless Mike explicitly requests it for that run. Markdown and standalone HTML are the standard deliverables.
 
 ## Review Gates
 
@@ -80,9 +98,13 @@ Require Mike review before:
 - Keep confidence visible for each employee or feedback item.
 - Preserve names exactly as source evidence supports them.
 - Flag unclear attribution instead of guessing.
+- Verify that both Monthly Checkpoint Report and Monthly Checkpoint Analysis exist as Markdown and standalone HTML before closing the run.
+- The Cliq-ready report must include verbatim client feedback per employee and cited company/account situation notes.
 
 ## Resources
 
 - `references/internal-summary-template.md`: internal checkpoint output.
 - `references/client-ready-template.md`: client-facing summary draft.
+- `references/cliq-report-template.md`: Cliq-ready verbatim feedback report.
+- `references/html-output-rules.md`: standalone HTML output requirements.
 - `schemas/feedback-item.schema.json`: structured feedback extraction schema.

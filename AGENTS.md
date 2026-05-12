@@ -95,6 +95,8 @@ Inputs:
   - columns used: `Employee`, `Client`, and scheduled weekday
 
 Expected outputs:
+- standalone HTML dashboard for review and navigation
+- editable Markdown audit/source draft
 - per employee task summary
 - per employee all-tasks listing for the covered period, not only active tasks
 - blockers open/resolved
@@ -127,6 +129,12 @@ Requirements:
 - if an employee appears in Gmail daily reports but is not found in the Google Sheet, flag that employee under an `Unmapped / Needs roster validation` section rather than silently excluding them
 - if the Google Sheet and Gmail evidence conflict, treat the Google Sheet as the schedule-routing source and note the conflict in the audit trail
 - if Gmail is missing a report and the CSV provides a usable substitute, note that the report was recovered from fallback data and lower confidence as appropriate
+- daily reports should generate `outputs/daily/YYYY-MM-DD/daily-report-dashboard.html` as the manager-facing artifact
+- daily report generation is not complete until `daily-report-dashboard.html` has been created and checked
+- daily report dashboards must be standalone HTML files that open directly in a browser and include easy navigation plus search/filter controls for employees, clients/teams, risk, and focus areas
+- daily report dashboards must show each employee's individual blockers and client perception inside the employee card/section, not only in the Markdown source or team-level summary
+- daily reports should keep `outputs/daily/YYYY-MM-DD/daily-report.md` as the editable audit/source draft
+- do not create daily report PDFs or PowerPoint decks unless Mike explicitly requests that format for that run
 
 Last known schedule snapshot from the Google Sheet:
 - Monday
@@ -182,24 +190,37 @@ Inputs:
 - sometimes informal written feedback
 
 Expected outputs:
-- verbatim client feedback per employee
+- Monthly Checkpoint Report:
+  - client's feedback verbatim per employee
+  - ready for internal Cliq posting
+  - citations for each verbatim feedback item
+  - cited company situation / account context
+- Monthly Checkpoint Analysis:
+  - categorized internal analysis
+  - team health
+  - client sentiment
+  - account growth opportunities
+  - team risks
+  - client health
+  - employee health concerns
+  - recommended manager actions
 - filler words removed
 - exclude comments made by Mike/Michael
 - categorize feedback into:
   - Performance
   - Quality
   - Communication
-- identify:
-  - account growth opportunities
-  - team risks
-  - client health
-  - employee health concerns
-- produce client-ready or internal-summary versions
+- output both deliverables as Markdown and standalone HTML under `outputs/monthly/YYYY-MM/checkpoints/`
 
 Rules:
 - if names are unclear, flag for human validation
 - do not invent feedback
 - preserve original meaning when cleaning transcript language
+- default monthly checkpoint filenames:
+  - `CLIENT-SLUG-monthly-checkpoint-report.md`
+  - `CLIENT-SLUG-monthly-checkpoint-report.html`
+  - `CLIENT-SLUG-monthly-checkpoint-analysis.md`
+  - `CLIENT-SLUG-monthly-checkpoint-analysis.html`
 
 ---
 
@@ -335,13 +356,14 @@ Prefer a workspace where:
 - manual edits are easy
 - review history is visible
 
-### F. PowerPoint-first deliverables
+### F. Deliverable format defaults
 Manager-facing workflow outputs should be delivered as PowerPoint slide decks by default.
 
 Markdown may be created and retained as the editable/audit source, but the final reviewed artifact should be exported to PowerPoint unless Mike explicitly requests another format.
 
-This applies especially to:
-- Daily Reports
+Daily Reports are the standing exception: the default manager-facing daily artifact is a standalone HTML dashboard with search, filters, and easy navigation. Keep Markdown as the audit source. Do not create daily PDF or PowerPoint outputs unless Mike explicitly asks for them.
+
+The PowerPoint-first default still applies especially to:
 - Weekly Team Reviews
 - Monthly Checkpoint summaries
 - Quarterly Performance Reviews

@@ -4,7 +4,9 @@
 
 Produce a manager-ready daily CSM status report for only the employees assigned to the current weekday.
 
-The manager-facing report must use an employee-first format. Each assigned employee gets a self-contained section with task tables, blockers, performance signals, risk assessment, strengths, improvement opportunities, manager actions, and a short executive summary. Source audit details remain required, but they belong after the employee sections so the first pages are immediately useful for review.
+The manager-facing report must be delivered as a standalone HTML dashboard with easy navigation, search, and filtering by employee, client/team, risk level, and focus area. Keep a Markdown source draft as the editable audit record. Do not create PDF or PowerPoint outputs unless Mike explicitly asks for them for that run.
+
+The report must use an employee-first format grouped by client. Each assigned employee gets a self-contained section with task tables, blockers, performance signals, risk assessment, strengths, improvement opportunities, manager actions, and a short executive summary. Source audit details remain required, but they belong after the employee sections so the first review surface is immediately useful.
 
 ## Required Inputs
 
@@ -45,15 +47,41 @@ For every assigned employee, including employees with no found report, provide:
 
 Separate direct evidence from interpreted insight. Do not invent status, blockers, risks, performance concerns, or burnout signals.
 
-## Required Output Sections
+## Required Output Artifacts
 
-Save the final report as a PDF to:
+Every daily report generation run must produce both artifacts below. Do not stop after Markdown only. Treat the run as incomplete until the standalone HTML dashboard has been created and checked.
+
+Save the editable audit source to:
 
 ```text
-outputs/daily/YYYY-MM-DD/daily-report.pdf
+outputs/daily/YYYY-MM-DD/daily-report.md
 ```
 
-If you compose the report as Markdown first, save the editable source to `outputs/daily/YYYY-MM-DD/daily-report.md`. Export to PDF only when Mike asks for a manager-facing copy or when the current workflow explicitly requires it.
+Save the manager-facing standalone dashboard to:
+
+```text
+outputs/daily/YYYY-MM-DD/daily-report-dashboard.html
+```
+
+The HTML file must be self-contained and open directly in a browser without a local server. It should include:
+
+1. A clear report header with run date, routed weekday, reporting window, source coverage, and review status.
+2. Search across employees, clients/teams, tickets, tasks, blockers, risks, and manager actions.
+3. Filters for client/team, risk level, and useful focus areas such as missing reports, blockers, QA/testing, and release work.
+4. Navigation links for overview, clients/teams, employees, manager actions, and source audit.
+5. Employee cards or sections with expandable detail for task tables, individual blockers, client perception, performance signals, risk, strengths, improvement opportunities, and manager actions.
+6. A team-level manager actions table.
+7. Coverage and source audit notes.
+
+Each employee card/section in the HTML dashboard must show a `Blockers` table with issue, status, and notes. If there are no blockers, show `None reported` or `Not enough evidence`; do not omit the section.
+
+Each employee card/section in the HTML dashboard must show a `Client Perception` section. Phrase it as likely perception only when supported by evidence. If the source does not support client perception, show `Not enough evidence`; do not invent sentiment.
+
+Before finishing the workflow, verify that `daily-report-dashboard.html` exists and contains the expected employee cards/sections, individual blockers, client perception, manager actions, source audit, search control, and filters.
+
+Do not create `daily-report.pdf`, `daily-report.pptx`, or a deck builder script unless Mike explicitly requests a PDF or PowerPoint export.
+
+## Required Markdown Sections
 
 Use these sections in this order:
 
