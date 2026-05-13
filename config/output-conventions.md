@@ -54,7 +54,7 @@ Create one section per assigned employee, in schedule order. Use this structure:
 
 ### Client Perception
 
-Short paragraph. Phrase as likely perception only when supported by evidence.
+Short paragraph from a client/customer or Senior Sales lens. Phrase as likely inferred perception based on daily-report evidence, not direct feedback, unless direct feedback exists. Include confidence when useful.
 
 ### Risk Assessment
 
@@ -136,7 +136,7 @@ The dashboard should include:
 3. Easy navigation by overview, client/team, employee, manager actions, and source audit.
 4. Employee cards or sections with expandable detail.
 5. An individual `Blockers` table inside every employee card/section, with issue, status, and notes. If no blockers are supported by the source data, show `None reported` or `Not enough evidence`.
-6. A `Client Perception` section inside every employee card/section. Use evidence-based phrasing only; if unsupported, show `Not enough evidence`.
+6. A `Client Perception` section inside every employee card/section. Use an evidence-based client/customer or Senior Sales lens based on daily reports. Do not present inferred perception as direct client feedback. If unsupported by the source data, show `Not enough evidence`.
 7. Team-level manager actions and coverage/source notes.
 
 Markdown drafts should be kept as editable source files for auditability.

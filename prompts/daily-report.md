@@ -38,7 +38,7 @@ For every assigned employee, including employees with no found report, provide:
 4. Task descriptions, status, and duration open when available.
 5. Blockers.
 6. Performance signals.
-7. Client perception, only when evidence supports it.
+7. Client perception from a client/customer or Senior Sales lens, inferred only from the daily-report evidence.
 8. Risk level: Green, Yellow, or Red.
 9. Strengths.
 10. Improvement opportunities.
@@ -75,7 +75,7 @@ The HTML file must be self-contained and open directly in a browser without a lo
 
 Each employee card/section in the HTML dashboard must show a `Blockers` table with issue, status, and notes. If there are no blockers, show `None reported` or `Not enough evidence`; do not omit the section.
 
-Each employee card/section in the HTML dashboard must show a `Client Perception` section. Phrase it as likely perception only when supported by evidence. If the source does not support client perception, show `Not enough evidence`; do not invent sentiment.
+Each employee card/section in the HTML dashboard must show a `Client Perception` section. Treat this as an evidence-based perception analysis from a client/customer or Senior Sales lens, not as direct client feedback unless actual feedback is present. Base the assessment on reported progress, delivery clarity, blocker handling, completion signals, communication quality, and risk. Phrase it as likely perception and include confidence when useful. If there is too little source data to infer anything, show `Not enough evidence`.
 
 Before finishing the workflow, verify that `daily-report-dashboard.html` exists and contains the expected employee cards/sections, individual blockers, client perception, manager actions, source audit, search control, and filters.
 
@@ -122,7 +122,7 @@ Create one section per assigned employee, in schedule order. Use this exact stru
 
 ### Client Perception
 
-Short paragraph. Phrase as likely perception only when supported by evidence.
+Short paragraph from a client/customer or Senior Sales lens. Phrase as likely inferred perception based on daily-report evidence, not direct feedback, unless direct feedback exists. Include confidence when useful.
 
 ### Risk Assessment
 

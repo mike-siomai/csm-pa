@@ -35,6 +35,10 @@ Review status: Draft for Mike review
 
 Evidence-based note only. Use `Not enough evidence` when unsupported.
 
+#### Client Perception
+
+Likely client/customer or Senior Sales perception based on daily-report evidence. State the confidence level and do not present inferred perception as direct client feedback.
+
 #### Risk Assessment
 
 **Risk Level: Green / Yellow / Red**

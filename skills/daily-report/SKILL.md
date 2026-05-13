@@ -43,8 +43,9 @@ If Gmail and the roster conflict, use the roster for schedule routing and docume
 3. Use fallback CSV only for scheduled employees with missing Gmail evidence.
 4. Extract all tasks mentioned in the covered period for each employee, not only currently active tasks.
 5. Identify blockers, resolved blockers, performance signals, burnout/overutilization signals, risk flags, and manager actions.
-6. Separate direct evidence from interpreted insight, assumptions, and missing data.
-7. Include an audit row for every scheduled employee.
+6. Add a `Client Perception` assessment for each employee from a client/customer or Senior Sales lens, using only the daily-report evidence. This is an inferred perception analysis, not direct client feedback, unless actual client feedback is present.
+7. Separate direct evidence from interpreted insight, assumptions, and missing data.
+8. Include an audit row for every scheduled employee.
 
 ## Output
 
@@ -60,7 +61,7 @@ The standalone HTML dashboard must include an employee card or section for every
 
 - all tasks mentioned in the covered source data,
 - individual blockers with status and notes,
-- client perception, phrased only when supported by evidence,
+- client perception from a client/customer or Senior Sales lens, explicitly grounded in daily-report evidence,
 - performance signals,
 - risk assessment,
 - strengths,
@@ -87,9 +88,10 @@ Default review status: `Draft for Mike review`.
 - Include scheduled employees even when no report is found.
 - Keep unsupported fields as `Unclear` or `Not enough evidence`.
 - In the HTML dashboard, include the employee's individual blockers and client perception inside the employee card/section.
+- For `Client Perception`, do not default to `Not enough evidence` merely because there is no direct client feedback. Infer likely perception from the employee's reported progress, blockers, clarity, delivery rhythm, and risk signals. Phrase it as `Likely client/customer perception` or `Senior Sales lens`, and say when confidence is low.
 - Preserve source references in the audit rather than crowding employee sections.
 - Use concise, manager-ready language.
-- Do not invent feedback, task status, blockers, risks, sentiment, or employee intent.
+- Do not invent direct feedback, task status, blockers, risks, sentiment, or employee intent. Keep inferred perception clearly labeled as inference from daily reports.
 
 ## Resources
 

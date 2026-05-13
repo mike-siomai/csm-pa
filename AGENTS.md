@@ -133,6 +133,7 @@ Requirements:
 - daily report generation is not complete until `daily-report-dashboard.html` has been created and checked
 - daily report dashboards must be standalone HTML files that open directly in a browser and include easy navigation plus search/filter controls for employees, clients/teams, risk, and focus areas
 - daily report dashboards must show each employee's individual blockers and client perception inside the employee card/section, not only in the Markdown source or team-level summary
+- daily report `Client Perception` should be an evidence-based inference from a client/customer or Senior Sales lens using the employee's reported progress, clarity, blockers, delivery rhythm, and risk signals; do not present this as direct client feedback unless actual client feedback is present
 - daily reports should keep `outputs/daily/YYYY-MM-DD/daily-report.md` as the editable audit/source draft
 - do not create daily report PDFs or PowerPoint decks unless Mike explicitly requests that format for that run
 
