@@ -1,0 +1,4 @@
+interface:
+  display_name: "Quarterly Performance Review"
+  short_description: "Draft evidence-backed employee performance reviews."
+  default_prompt: "Create quarterly performance review drafts for the requested employee, client, team, or quarter."
