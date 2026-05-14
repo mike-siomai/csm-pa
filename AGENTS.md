@@ -397,6 +397,7 @@ Evaluate whether CSM HQ should include these major areas:
    - current MVP skills:
      - `skills/daily-report/`
      - `skills/monthly-checkpoint/`
+     - `skills/quarterly-performance-review/`
      - `skills/quarterly-account-review/`
    - use these project-local skills as the preferred entry points when Mike asks for those workflows
    - keep workflow-specific procedure in the skill, and keep global policy in `AGENTS.md` and `config/`

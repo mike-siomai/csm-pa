@@ -207,3 +207,81 @@ Each HTML file should include:
 6. A visible review status or review gate.
 
 Before closing a monthly checkpoint run, verify that all four files exist and that the HTML files contain the expected employee sections, cited feedback, account context, action items, and review gate.
+
+## Quarterly Performance Review Paths
+
+Quarterly performance review generation is complete when each employee in scope has a draft Markdown review and matching standalone HTML review. When Mike requests a final manager-facing package, create a PowerPoint deck after the Markdown and HTML drafts are reviewed.
+
+Save quarterly performance review outputs under:
+`outputs/quarterly/YYYY-Q#/performance-reviews/`
+
+| Artifact | Path |
+|---|---|
+| Per-employee review draft | `outputs/quarterly/YYYY-Q#/performance-reviews/EMPLOYEE-SLUG-performance-review.md` |
+| Per-employee standalone review | `outputs/quarterly/YYYY-Q#/performance-reviews/EMPLOYEE-SLUG-performance-review.html` |
+| Combined review index | `outputs/quarterly/YYYY-Q#/performance-reviews/performance-review-index.md` |
+| Combined standalone review index | `outputs/quarterly/YYYY-Q#/performance-reviews/performance-review-index.html` |
+| Final manager-facing deck, when requested | `outputs/quarterly/YYYY-Q#/performance-reviews/performance-review-deck.pptx` |
+
+## Required Quarterly Performance Review Sections
+
+Create one review per employee in scope.
+
+1. Employee and review-period header
+2. Evidence Coverage
+3. Recommended Ratings for all 10 competencies
+4. Top 3 Highlights
+5. Top 3 Lowlights
+6. Growth Opportunities
+7. Manager Summary
+8. Evidence vs. Interpretation
+9. Missing Data / Validation Needed
+10. Review Gate
+
+Required competencies:
+
+- Quality of Deliverables
+- Efficiency and Speed
+- Collaboration and Teamwork
+- Problem Solving
+- Communication
+- Overall Attitude / Response to Feedback
+- Reliability / Meeting Deadlines
+- Punctuality / Shows Up to Meetings on Time
+- Ability to Work Independently
+- Connectivity / Bandwidth
+
+Allowed ratings:
+
+- Needs Improvement
+- Meets Expectation
+- Exceeds Expectation
+
+Every competency rating must include evidence summary, manager rationale, and confidence. Use a developmental but firm manager tone. Do not invent client feedback, punctuality issues, connectivity concerns, attitude concerns, missed deadlines, or root cause.
+
+## Quarterly Performance Review Source Rules
+
+Use daily reports as operating evidence and monthly checkpoints as client/context evidence.
+
+If both are available, consider both before assigning ratings. If either source is missing, proceed only as a lower-confidence draft and flag the missing source clearly.
+
+Performance review ratings are not final until Mike reviews and approves them. End each employee review with:
+
+`Status: Draft for Mike review. Ratings require Mike approval before final use.`
+
+## Quarterly Performance Review HTML Rules
+
+Quarterly performance review HTML files must be standalone files that open directly in a browser without a local server.
+
+Each per-employee HTML file should include:
+
+1. Employee name, client/team, review period, overall confidence, and review status.
+2. Navigation links to ratings, highlights, lowlights, growth opportunities, manager summary, evidence, missing data, and review gate.
+3. A readable competency rating table with rating, evidence summary, manager rationale, and confidence.
+4. Visible confidence labels for ratings and source coverage.
+5. Clear separation between direct evidence and interpreted insight.
+6. A visible review gate stating that ratings require Mike approval before final use.
+
+When more than one employee is reviewed, create a standalone `performance-review-index.html` that links or navigates to each employee review and summarizes employee, client/team, overall confidence, key rating concerns, and validation needs.
+
+Before closing a quarterly performance review run, verify that each employee has both `.md` and `.html` files, and that the HTML files contain the expected ratings, highlights, lowlights, growth opportunities, manager summary, evidence separation, missing-data section, and review gate.
