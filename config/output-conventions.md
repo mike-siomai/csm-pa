@@ -13,6 +13,50 @@ Daily report generation is complete only when both the source draft and standalo
 | Daily source draft | `outputs/daily/YYYY-MM-DD/daily-report.md` |
 | Daily final dashboard | `outputs/daily/YYYY-MM-DD/daily-report-dashboard.html` |
 
+## Weekly Team Review Paths
+
+Weekly team review generation is complete only when both the source draft and standalone dashboard exist.
+
+| Artifact | Path |
+|---|---|
+| Weekly source draft | `outputs/weekly/YYYY-MM-DD_YYYY-MM-DD/weekly-team-review.md` |
+| Weekly final dashboard | `outputs/weekly/YYYY-MM-DD_YYYY-MM-DD/weekly-team-review.html` |
+
+## Required Weekly Team Review Sections
+
+Weekly team reviews should be organized by client/team first, then employee within each client/team.
+
+1. Report Header
+2. Executive Summary
+3. Weekly Team Health Score
+4. Client / Team Review
+5. Employee Summaries
+6. Repeated Blockers / Delivery Risks
+7. Low Visibility / Compliance Watch
+8. Recommended Manager Actions
+9. Source Coverage and Audit
+10. Assumptions and Missing Data
+11. Review Gate
+
+## Weekly HTML Dashboard Rules
+
+The final weekly team review artifact should be a standalone HTML dashboard. It must open directly in a browser without requiring a local server.
+
+The dashboard should include:
+
+1. Search across clients/teams, employees, tasks, blockers, risks, and manager actions.
+2. Filters for client/team, health score, risk level, repeated blockers, low visibility, missing reports, and focus areas.
+3. Easy navigation by overview, client/team, employee, blockers/risks, manager actions, and source audit.
+4. Client/team sections with health score, productivity trend, repeated blockers, strong performer signals, low visibility or compliance watch, and recommended manager actions.
+5. Employee summaries covering active workstreams, delivery rhythm, blocker pattern, communication visibility, risk level, and recommended CSM action.
+6. A source coverage and audit section showing evidence sources, gaps, fallback usage, and confidence notes.
+
+Markdown drafts should be kept as editable source files for auditability.
+
+Before closing a weekly team review run, verify that the HTML dashboard exists and includes the expected client/team sections, employee summaries, health score, repeated blockers, low-visibility/compliance watch, manager actions, source audit, search control, and filters.
+
+Do not create weekly PDF or PowerPoint artifacts by default. Create `weekly-team-review.pdf`, `weekly-team-review.pptx`, or a deck builder only when Mike explicitly requests that format for a specific run.
+
 ## Required Daily Report Sections
 
 Daily reports must use an employee-first layout. The first manager-facing pages should be the per-employee review sections, not a broad operations summary.

@@ -20,7 +20,7 @@ The assistant may collect, organize, analyze, summarize, and draft outputs when 
 | Draft Cliq-ready summaries | Allowed as draft text for Mike review. |
 | Draft email or follow-up language | Allowed as draft text only. |
 | Save draft reports under `outputs/` | Allowed using the output conventions. |
-| Create standalone HTML dashboards | Allowed for daily report outputs under `outputs/`. |
+| Create standalone HTML dashboards | Allowed for daily and weekly report outputs under `outputs/`. |
 | Export draft reports to PDF or PowerPoint | Allowed only when Mike explicitly requests that format for the specific workflow run. |
 
 ## Requires Explicit Approval

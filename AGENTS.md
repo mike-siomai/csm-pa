@@ -173,6 +173,8 @@ Inputs:
 - optional manager notes
 
 Expected outputs:
+- standalone HTML weekly dashboard for manager review and navigation
+- editable Markdown audit/source draft
 - weekly summary per developer
 - active workstreams
 - repeated blockers
@@ -180,6 +182,15 @@ Expected outputs:
 - engagement or communication concerns
 - team health score (Red / Yellow / Green)
 - top recommended support actions
+
+Requirements:
+- weekly team reviews should generate `outputs/weekly/YYYY-MM-DD_YYYY-MM-DD/weekly-team-review.html` as the manager-facing artifact
+- weekly team review generation is not complete until `weekly-team-review.html` has been created and checked
+- weekly team review dashboards must be standalone HTML files that open directly in a browser and include easy navigation plus search/filter controls for clients/teams, employees, health, blockers, risks, and manager actions
+- keep `outputs/weekly/YYYY-MM-DD_YYYY-MM-DD/weekly-team-review.md` as the editable audit/source draft
+- organize weekly reviews by client/team first, then employee within each client/team
+- include source coverage, missing-report patterns, repeated blockers, delivery risk trends, team health, and recommended manager actions
+- do not create weekly PDFs or PowerPoint decks unless Mike explicitly requests that format for that run
 
 ---
 
@@ -358,14 +369,13 @@ Prefer a workspace where:
 - review history is visible
 
 ### F. Deliverable format defaults
-Manager-facing workflow outputs should be delivered as PowerPoint slide decks by default.
+Manager-facing workflow outputs should be delivered as PowerPoint slide decks by default unless a workflow-specific exception says otherwise.
 
 Markdown may be created and retained as the editable/audit source, but the final reviewed artifact should be exported to PowerPoint unless Mike explicitly requests another format.
 
-Daily Reports are the standing exception: the default manager-facing daily artifact is a standalone HTML dashboard with search, filters, and easy navigation. Keep Markdown as the audit source. Do not create daily PDF or PowerPoint outputs unless Mike explicitly asks for them.
+Daily Reports and Weekly Team Reviews are standing exceptions: the default manager-facing artifact is a standalone HTML dashboard with search, filters, and easy navigation. Keep Markdown as the audit source. Do not create daily or weekly PDF or PowerPoint outputs unless Mike explicitly asks for them.
 
 The PowerPoint-first default still applies especially to:
-- Weekly Team Reviews
 - Monthly Checkpoint summaries
 - Quarterly Performance Reviews
 - Quarterly Account Reviews
@@ -396,6 +406,7 @@ Evaluate whether CSM HQ should include these major areas:
    - each skill contains instructions, examples, schemas, and output templates
    - current MVP skills:
      - `skills/daily-report/`
+     - `skills/weekly-team-review/`
      - `skills/monthly-checkpoint/`
      - `skills/quarterly-performance-review/`
      - `skills/quarterly-account-review/`

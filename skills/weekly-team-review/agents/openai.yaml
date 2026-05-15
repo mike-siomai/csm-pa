@@ -1,0 +1,4 @@
+interface:
+  display_name: "Weekly Team Review"
+  short_description: "Build weekly team review dashboards."
+  default_prompt: "Run the CSM weekly team review workflow for the requested week, client, or team."
